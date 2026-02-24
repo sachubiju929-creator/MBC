@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MBC Hostel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="header">
+    <div class="logo">📘</div>
+    <h1>MBC Hostel</h1>
+    <p>Management System</p>
+  </div>
+
+  <div class="card">
+
+    <h3>Login As</h3>
+
+    <div class="tabs">
+      <button class="tab active" onclick="setRole('student', this)">Student</button>
+      <button class="tab" onclick="setRole('warden', this)">Warden</button>
+      <button class="tab" onclick="setRole('mess', this)">Mess Staff</button>
+    </div>
+
+    <h4 id="loginTitle">Student Login</h4>
+
+    <label>Email or Admission Number</label>
+    <input type="text" id="username" placeholder="Enter your email or admission number">
+
+    <label>Password</label>
+    <input type="password" placeholder="Enter your password">
+
+    <div class="forgot">
+      <a href="forgot.html">Forgot Password?</a>
+    </div>
+
+    <button class="btn" onclick="login()">Sign In</button>
+
+    <div class="register">
+      Don't have an account?
+      <a href="register.html">Register here</a>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/login.js"></script>
+</body>
+</html>
