@@ -1,23 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Forgot Password</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBC Hostel - Forgot Password</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="center">
+<body>
+  <main class="simple-page">
+    <section class="card">
+      <h2>Forgot Password</h2>
+      <p class="muted">Enter your registered email to receive a reset link.</p>
 
-<div class="card">
-  <h2>Forgot Password</h2>
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="Enter your email">
 
-  <input type="email" id="email" placeholder="Enter Email">
+      <p id="message" class="message"></p>
+      <button class="btn" id="forgotBtn">Send Reset Link</button>
 
-  <button onclick="sendReset()">Send Reset Link</button>
+      <div class="row-links center">
+        <a href="index.html">Back to Login</a>
+      </div>
+    </section>
+  </main>
 
-  <div style="text-align:center; margin-top:10px;">
-    <a href="index.html">Back to Login</a>
-  </div>
-</div>
-
-<script src="js/forgot.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/forgot.js"></script>
 </body>
 </html>

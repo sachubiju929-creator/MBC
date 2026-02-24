@@ -1,52 +1,63 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-  <title>MBC Hostel</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBC Hostel - Login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main class="auth-layout">
+    <section class="brand-panel">
+      <div class="logo">🏨</div>
+      <h1>MBC Hostel</h1>
+      <p>Hostel Management System</p>
+      <ul>
+        <li>Student, Warden, and Mess Staff logins</li>
+        <li>Role-based dashboards</li>
+        <li>Leave, complaint, and mess overview</li>
+      </ul>
+    </section>
 
-<div class="page">
+```
+<section class="card">
+  <h2>Sign In</h2>
+  <p class="muted">Choose your role and continue.</p>
 
-  <div class="header">
-    <div class="logo">📘</div>
-    <h1>MBC Hostel</h1>
-    <p>Management System</p>
+  <div class="tabs" id="roleTabs">
+    <button class="tab active" data-role="student">Student</button>
+    <button class="tab" data-role="warden">Warden</button>
+    <button class="tab" data-role="mess">Mess</button>
   </div>
 
-  <div class="card">
+  <label for="identifier">Email or Admission Number</label>
+  <input id="identifier" type="text" placeholder="student@mbc.local or MBCS001">
 
-    <h3>Login As</h3>
+  <label for="password">Password</label>
+  <input id="password" type="password" placeholder="Enter password">
 
-    <div class="tabs">
-      <button class="tab active" onclick="setRole('student', this)">Student</button>
-      <button class="tab" onclick="setRole('warden', this)">Warden</button>
-      <button class="tab" onclick="setRole('mess', this)">Mess Staff</button>
-    </div>
+  <p id="message" class="message"></p>
 
-    <h4 id="loginTitle">Student Login</h4>
+  <button class="btn" id="loginBtn">Login</button>
 
-    <label>Email or Admission Number</label>
-    <input type="text" id="username" placeholder="Enter your email or admission number">
-
-    <label>Password</label>
-    <input type="password" id="password" placeholder="Enter your password">
-
-    <div class="forgot">
-      <a href="forgot.html">Forgot Password?</a>
-    </div>
-
-    <button class="btn" onclick="login()">Sign In</button>
-
-    <div class="register">
-      Don't have an account?
-      <a href="register.html">Register here</a>
-    </div>
-
+  <div class="row-links">
+    <a href="forgot.html">Forgot password?</a>
+    <a href="register.html">Create account</a>
   </div>
 
-</div>
+  <div class="demo-help">
+    <strong>Demo credentials:</strong>
+    <span>student@mbc.local / student123</span>
+  </div>
+</section>
+```
 
-<script src="js/login.js"></script>
+  </main>
+
+  <script src="js/api.js"></script>
+
+  <script src="js/login.js"></script>
+
 </body>
 </html>

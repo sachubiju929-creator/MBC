@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mess Dashboard</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <main class="dashboard-page">
+    <header class="dashboard-header">
+      <h2>Mess Dashboard</h2>
+      <button class="btn secondary" onclick="logout()">Logout</button>
+    </header>
+
+    <section class="dashboard-panel">
+      <h3 id="name"></h3>
+      <div class="stats">
+        <article class="stat-box"><h4>Total Students</h4><p id="students">-</p></article>
+        <article class="stat-box"><h4>Meals Today</h4><p id="meals">-</p></article>
+        <article class="stat-box"><h4>Mess Cuts</h4><p id="cuts">-</p></article>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/mess.js"></script>
+</body>
+</html>
